@@ -6,7 +6,7 @@
 /*   By: abelfranciscusvanbergen <abelfranciscus      +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/10/12 21:17:46 by abelfrancis   #+#    #+#                 */
-/*   Updated: 2020/10/12 21:31:53 by abelfrancis   ########   odam.nl         */
+/*   Updated: 2020/10/13 11:32:26 by avan-ber      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,8 +22,7 @@ int main(int ac, char **av)
 		{
 			for(int i = 0; av[j][i] != '\0'; i++)
 			{
-				if(av[j][i] >= 'a' && av[j][i] <= 'z')
-					av[j][i] -= 32;
+				av[j][i] = (char)toupper(av[j][i]);
 			}
 			std::cout << av[j];
 		}

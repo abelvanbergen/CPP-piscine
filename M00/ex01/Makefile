@@ -3,19 +3,19 @@
 #                                                         ::::::::             #
 #    Makefile                                           :+:    :+:             #
 #                                                      +:+                     #
-#    By: abelfranciscusvanbergen <abelfranciscus      +#+                      #
+#    By: avan-ber <avan-ber@student.codam.nl>         +#+                      #
 #                                                    +#+                       #
-#    Created: 2020/10/12 21:00:09 by abelfrancis   #+#    #+#                  #
-#    Updated: 2020/10/13 11:08:32 by avan-ber      ########   odam.nl          #
+#    Created: 2020/10/13 11:05:11 by avan-ber      #+#    #+#                  #
+#    Updated: 2020/10/13 11:08:25 by avan-ber      ########   odam.nl          #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = megaphone
+NAME = phonebook
 
 CC = clang++
 C++FLAGS = -Wall -Werror -Wextra -std=c++98 -pedantic
 
-SRCS = 	megaphone.cpp
+SRCS = 	phonebook.cpp Contact.class.cpp
 
 all:$(NAME)
 
