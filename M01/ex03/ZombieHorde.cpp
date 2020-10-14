@@ -6,7 +6,7 @@
 /*   By: avan-ber <avan-ber@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/10/14 17:32:11 by avan-ber      #+#    #+#                 */
-/*   Updated: 2020/10/14 18:18:39 by avan-ber      ########   odam.nl         */
+/*   Updated: 2020/10/14 19:17:00 by avan-ber      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ ZombieHorde::ZombieHorde(int N)
 	this->_n = N;
 	for(int i = 0; i < N; i++)
 	{
-		int index = rand() % 40;;
+		int index = rand() % 40;
 		this->_horde[i].setType("screamer");
 		this->_horde[i].setName(names[index]);
 	}
