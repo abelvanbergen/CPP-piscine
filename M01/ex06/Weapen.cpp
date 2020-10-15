@@ -1,23 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   main.cpp                                           :+:    :+:            */
+/*   Weapen.cpp                                         :+:    :+:            */
 /*                                                     +:+                    */
 /*   By: avan-ber <avan-ber@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2020/10/14 18:53:53 by avan-ber      #+#    #+#                 */
-/*   Updated: 2020/10/15 09:15:23 by avan-ber      ########   odam.nl         */
+/*   Created: 2020/10/15 10:31:24 by avan-ber      #+#    #+#                 */
+/*   Updated: 2020/10/15 11:56:58 by avan-ber      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <iostream>
-#include "Brain.hpp"
-#include "Human.hpp"
+#include "Weapon.hpp"
 
-int main(void)
+void		Weapon::setType(std::string type)
 {
-	Human bob;
+	this->_type = type;
+}
 
-	std::cout << bob.identify() << std::endl;
-	std::cout << bob.getBrain().identify() << std::endl;
+std::string&		Weapon::getType()
+{
+	return(this->_type);
+}
+
+Weapon::Weapon(std::string weapon) : _type(weapon)
+{
+	std::cout << "Weapon Constructor called" << std::endl;
+	return ;
+}
+
+Weapon::~Weapon(void)
+{
+	std::cout << "Weapon Destructor called" << std::endl;
+	return ;
 }

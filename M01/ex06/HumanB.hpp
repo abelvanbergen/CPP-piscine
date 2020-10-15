@@ -1,23 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   main.cpp                                           :+:    :+:            */
+/*   HumanB.hpp                                         :+:    :+:            */
 /*                                                     +:+                    */
 /*   By: avan-ber <avan-ber@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2020/10/14 18:53:53 by avan-ber      #+#    #+#                 */
-/*   Updated: 2020/10/15 09:15:23 by avan-ber      ########   odam.nl         */
+/*   Created: 2020/10/15 10:39:10 by avan-ber      #+#    #+#                 */
+/*   Updated: 2020/10/15 13:09:59 by avan-ber      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
+#ifndef HUMANB_HPP
+# define HUMANB_HPP
+
 #include <iostream>
-#include "Brain.hpp"
-#include "Human.hpp"
+#include "Weapon.hpp"
 
-int main(void)
+class	HumanB
 {
-	Human bob;
+	private:
+		std::string	_name;
+		Weapon		*_weapon;
+	public:
+		void	attack();
 
-	std::cout << bob.identify() << std::endl;
-	std::cout << bob.getBrain().identify() << std::endl;
-}
+		void	setWeapon(Weapon& weapon);
+
+		HumanB(std::string name);
+		~HumanB(void);
+};
+
+#endif

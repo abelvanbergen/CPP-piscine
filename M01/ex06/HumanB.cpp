@@ -1,31 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   Brain.cpp                                          :+:    :+:            */
+/*   HumanB.cpp                                         :+:    :+:            */
 /*                                                     +:+                    */
 /*   By: avan-ber <avan-ber@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2020/10/14 19:15:10 by avan-ber      #+#    #+#                 */
-/*   Updated: 2020/10/15 09:17:32 by avan-ber      ########   odam.nl         */
+/*   Created: 2020/10/15 12:50:52 by avan-ber      #+#    #+#                 */
+/*   Updated: 2020/10/15 13:09:14 by avan-ber      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <iostream>
-#include "Brain.hpp"
+#include "HumanB.hpp"
+#include "Weapon.hpp"
 
-Brain*	Brain::identify()
+void	HumanB::attack(void)
 {
-	return this;
+	std::cout << _name << " attacks with his " << this->_weapon->getType()<< std::endl;
 }
 
-Brain::Brain(void)
+void	HumanB::setWeapon(Weapon& weapon)
 {
-	std::cout << "Brain Constructor called" << std::endl;
+	this->_weapon = &weapon;
+}
+
+HumanB::HumanB(std::string name) : _name(name)
+{
+	std::cout << "HumanB Constructor called" << std::endl;
 	return ;
 }
 
-Brain::~Brain(void)
+HumanB::~HumanB(void)
 {
-	std::cout << "Brain Destructor called" << std::endl;
+	std::cout << "HumanB Destructor called" << std::endl;
 	return ;
 }

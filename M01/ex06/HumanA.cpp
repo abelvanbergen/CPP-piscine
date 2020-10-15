@@ -1,23 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   main.cpp                                           :+:    :+:            */
+/*   HumanA.cpp                                         :+:    :+:            */
 /*                                                     +:+                    */
 /*   By: avan-ber <avan-ber@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2020/10/14 18:53:53 by avan-ber      #+#    #+#                 */
-/*   Updated: 2020/10/15 09:15:23 by avan-ber      ########   odam.nl         */
+/*   Created: 2020/10/15 10:47:19 by avan-ber      #+#    #+#                 */
+/*   Updated: 2020/10/15 12:01:04 by avan-ber      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <iostream>
-#include "Brain.hpp"
-#include "Human.hpp"
+#include "HumanA.hpp"
+#include "Weapon.hpp"
 
-int main(void)
+void	HumanA::attack(void)
 {
-	Human bob;
+	std::cout << _name << " attacks with his " << this->_weapon.getType()<< std::endl;
+}
 
-	std::cout << bob.identify() << std::endl;
-	std::cout << bob.getBrain().identify() << std::endl;
+HumanA::HumanA(std::string name, Weapon& weapon) : _name(name),  _weapon(weapon)
+{
+	std::cout << "HumanA Constructor called" << std::endl;
+	return ;
+}
+
+HumanA::~HumanA(void)
+{
+	std::cout << "HumanA Destructor called" << std::endl;
+	return ;
 }

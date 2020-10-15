@@ -1,23 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   main.cpp                                           :+:    :+:            */
+/*   Weapon.hpp                                         :+:    :+:            */
 /*                                                     +:+                    */
 /*   By: avan-ber <avan-ber@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2020/10/14 18:53:53 by avan-ber      #+#    #+#                 */
-/*   Updated: 2020/10/15 09:15:23 by avan-ber      ########   odam.nl         */
+/*   Created: 2020/10/15 10:26:37 by avan-ber      #+#    #+#                 */
+/*   Updated: 2020/10/15 11:35:24 by avan-ber      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
+#ifndef WEAPON_HPP
+# define WEAPON_HPP
+
 #include <iostream>
-#include "Brain.hpp"
-#include "Human.hpp"
 
-int main(void)
+class Weapon
 {
-	Human bob;
+	private:
+		std::string _type;
 
-	std::cout << bob.identify() << std::endl;
-	std::cout << bob.getBrain().identify() << std::endl;
-}
+	public:
+		void			setType(std::string weapon);
+
+		std::string&	getType();
+
+		Weapon(std::string weapon);
+		~Weapon(void);
+};
+
+#endif
